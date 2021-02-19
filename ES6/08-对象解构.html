@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var title = '邓晨阳';
+        var link = 'https://www.baidu.com';
+        let info2 = {
+            title,
+            link,
+            go(){
+                console.log('我骑着电瓶车上学！');
+            }
+        }
+
+        // 获取对象属性 和 方法的方式有两种：
+        // 通过 . 的方式
+        console.log(info2.title);
+        console.log(info2.link);
+        info2.go();
+
+        // 通过 ['']的方式
+        console.log(info2['title']);
+        console.log(info2['link']);
+        info2['go']();
+
+        // ES6 对象解构：一种快速获取对象属性和方法的一种形式
+        var {title,link,go} = info2;
+        console.log(title,link);
+        go();
+
+    </script>
+</body>
+</html>

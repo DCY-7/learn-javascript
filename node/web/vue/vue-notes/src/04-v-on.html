@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+<head>
+
+<body>
+    <div id="app">
+        <!-- 使用 v-on 绑定了click 事件，并指定了名为 sayHi 的方法 -->
+        <!-- @ 是v-on 指令的简写 -->
+        <button v-on:click="sayHi">点我</button>
+        <button @click="sayHi">点我</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue',
+            },
+            // 方法必须定义在 Vue 实例的 methods 对象中
+            methods: {
+                sayHi() {
+                    alert(this.message);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

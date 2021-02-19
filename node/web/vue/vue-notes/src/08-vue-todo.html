@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+<head>
+
+<body>
+    <div id="app">
+        <todo>
+            <todo-title slot="todo-title" title="学习计划"></todo-title>
+            <todo-items slot="todo-items" v-for="(item,index) in todoItems" 
+                v-bind:item="item" v-bind:index="index" v-on:remove="removeTodoItems(index)"></todo-items>
+        </todo>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script>
+        Vue.component('todo',{
+            template: '<div>\
+                            <slot name="todo-title"></slot>\
+                            <ul>\
+                                <slot name="todo-items"></slot>\
+                            </ul>\
+                        </div>'
+        })
+        Vue.component('todo-title',{
+            props: ['title'],
+            template: '<div>{{title}}</div>'
+        })
+        Vue.component('todo-items',{
+            props: ['item','index'],
+            template: `<li>{{index + 1}}.{{item}}    
+                <button @click="remove_component">删除</button></li>`,
+            methods: {
+                remove_component(index){
+                    // 这里的remove 是自定义时间的名称，需要在HTML中使用v-on:remove的方式指派
+                    this.$emit('remove',index)
+                }
+            }
+        })
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                todoItems: ['java','databases','spring']
+            },
+            methods: {
+                removeTodoItems(index){
+                    console.log('删除 '+this.todoItems[index] +'成功' );
+                    this.todoItems.splice(index,1);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

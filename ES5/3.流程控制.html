@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        // if 判断
+        var age = 3;
+        if (age >= 18) {
+            console.log('adult');
+        } else if (age >= 6) {
+            console.log('teenager');
+        } else {
+            console.log('kid');
+        }
+        // for 循环
+        // 基础语法
+        var x = 0;
+        for (let i = 0; i <= 100; i++) {
+            x = x+i;
+        }
+        console.log(x);
+        // 遍历数组
+        var arr = ['Apple', 'Google', 'Microsoft'];
+        for (let index = 0; index < arr.length; index++) {
+            var element = arr[index];
+            console.log(element);
+        }
+        console.log('123');
+        // 死循环
+        // for (; ;) {
+        //     if(x>100){
+        //         break;
+        //     }
+        //     x++;
+        //     console.log(x);
+        // }
+        // for ... in 循环：把一个对象的所有属性循环出来
+        var o = { 
+            name: 'Jack', 
+            age: 20, 
+            city: 'Beijing' 
+        };
+        for (var key in o) {
+            if (o.hasOwnProperty(key)) {
+                console.log(key);
+            }
+        }
+        for (const key in arr) {
+            if (arr.hasOwnProperty.call(arr, key)) {
+                console.log(arr[key]);
+            }
+        }
+        // for ... of 循环
+        // for ... each 循环
+        // while 循环
+        // var x = 0; var n = 99; 
+        // while (n > 0) {
+        //     x = x + n;
+        //     n = n - 2; 
+        // } 
+        // x; // 2500
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

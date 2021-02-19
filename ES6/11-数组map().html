@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 要对 arr数组中的每个元素 *2
+        var arr = [1,2,3,4,5,6,7]
+        let newarr = [];
+
+        // 传统方式：
+        for (let i = 0; i < arr.length; i++) {
+            newarr.push(arr[i]*2);
+        }
+        console.log(newarr);
+
+        // map 方式：自带的循环，并且会把处理的值填回对应的值
+        let newarr2 = arr.map((element) => {
+            return element * 2;
+        })
+        console.log(newarr2);
+
+        // map 处理JSON对象数组的数据
+        var users = [{age:10,name:'zhangsan'},{age:11,name:'lisi'},{age:12,name:'wangwu'}]
+        var newusers = users.map((element) => {
+            element.age = element.age + 1;
+            element.check = true;
+            return element;
+        })
+        console.log(newusers);
+
+    </script>
+</body>
+</html>

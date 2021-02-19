@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        // 在 JavaScript 世界里，一切皆是对象
+        // 标准对象：使用 typeof 操作符获取对象的类型，它总是返回一个字符串
+        typeof 123; // 'number' 
+        typeof NaN; // 'number' 
+        typeof 'str'; // 'string' 
+        typeof true; // 'boolean' 
+        typeof undefined; // 'undefined' 
+        typeof Math.abs; // 'function' 
+        typeof null; // 'object' 
+        typeof []; // 'object' 
+        typeof {}; // 'object'
+
+        // Date
+        var now = new Date();
+        console.log(now); // Sat Feb 06 2021 21:23:21 GMT+0800 (中国标准时间)
+        console.log(now.getFullYear()); //2021 年份
+        console.log(now.getMonth()); // 1 月份，范围是0~11，1代表二月
+        console.log(now.getDate()); // 6 表示6号
+        console.log(now.getDay()); // 6 表示星期六
+        console.log(now.getHours()); // 21 24小时制
+        console.log(now.getMinutes()); // 23 分钟
+        console.log(now.getSeconds()); // 40 秒
+        console.log(now.getMilliseconds()); // 232 毫秒
+        console.log(now.getTime()); // 1612617820232 以number 形式表示的时间戳
+        console.log(now.toLocaleString()); // 2021/2/6下午9:28:56
+        console.log(now.toLocaleTimeString()); // 下午9:28:56
+
+        // JSON 
+        // JSON 和 JavaScript 对象互转： JSON.parse('JSON字符串'); JSON.stringify('JS对象');
+        var user = {
+            name: "邓晨阳",
+            age: 6,
+            sex: "男"
+        };
+        // 将 JS 对象转换为 JSON格式的字符串
+        var str = JSON.stringify(user);
+        console.log(str);
+
+        // 将JSON 格式的字符串转换为 JS 对象
+        var user2 = JSON.parse(str);
+        console.log(user2.name,user2.age,user2.sex);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 模拟后台：异步查询返回用户数据 如下：
+        function findUsers(){
+            $.get("xxxxx",function(res){
+                var res = {
+                    pages:11,
+                    pageSize:10,
+                    pageNo:1,
+                    firstFlag:true,
+                    lastFlag:false,
+                    total:123,
+                    data:[{},{},{},{}],
+                };
+                // ==========================对象 ... 取值===============
+                var {data:users,...pagesjon} = res;
+                //等价于
+                /*  var users = res.data;
+                   var pagesjon = {
+                    res = {
+                        pages:11,
+                        pageSize:10,
+                        pageNo:1,
+                        firstFlag:true,
+                        lastFlag:false,
+                        total:123,
+                    }; */
+            })
+        }
+    </script>
+</body>
+</html>

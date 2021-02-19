@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        // JavaScript 不区分类 和 实例的概念，而是通过原型（prototype）来实现面向对象编程
+
+        // ES6中新的关键字 class ：目的就是让类的定义更加简单
+        class Student {
+            constructor(name) {
+                this.name = name;
+            }
+
+            hello(){
+                console.log('Hello, '+this.name + '!');
+            }
+        }
+
+        var xiaoming = new Student('小明');
+        xiaoming.hello();
+
+        class PrimaryStudent extends Student{
+            constructor(name,grade){
+                super(name);
+                this.grade = grade;
+            }
+
+            myGrade(){
+                console.log('I am at grade '+this.grade);
+            }
+        }
+
+        var xiaowang = new PrimaryStudent('小王',100);
+        xiaowang.hello();
+        xiaowang.myGrade();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

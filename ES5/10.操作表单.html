@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    
+</body>
+    <script>
+        // 获取值
+        // 获取到一个 <input> 节点的引用后调用 value 属性，适用于 text、password、hidden、select
+        // 但是对于 radio、checkBox value永远是HTML预设的值，所以应该用 checked 判断
+
+        // 设置值
+        // 和获取值类似，对于text、password、hidden、select直接设置 value属性即可
+        // 对于单选框、复选框，设置 checked 属性为 true 或 false 即可
+
+        // 提交表单
+        // 方式一：扰乱了浏览器对 form表单的正常提交。浏览器默认点击<buttotn type="submit">时提交表单
+        // function doSubmitForm() {
+        //     var form = document.getElementById('test-form');
+        //     // 可以在此修改form的input...
+        //     // 提交form:
+        //     form.submit(); 
+        // }
+
+        // 方式二：响应 <form> 本身的 onsubmit 事件，在提交 form 时作修改
+        // function doSubmitForm() {
+        //     var input_pwd = document.getElementById('input-password');
+        //     var md5_pwd = document.getElementById('md5-pwd');
+        //     // 把用户输入的明文变为MD5
+        //     md5_pwd.value = md5(pwd.value);
+        //     // 继续下一步
+        //     return true;
+        // }
+
+    </script>
+</html>

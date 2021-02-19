@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        // 函数的定义：
+        // function abs(x) {
+        //     if (x >= 0) { 
+        //         return x; 
+        //     } else {
+        //         return -x; 
+        //     }
+        // }
+        var abs = function (x){
+            if (typeof x != 'number'){
+                throw 'Not a number';
+            }
+            if (x >= 0) { 
+                return x; 
+            } else {
+                return -x; 
+            }
+        };
+        function foo(a,b,...rest) {
+            console.log('a = '+a);
+            console.log('b = '+b);
+            console.log(rest);
+        }
+        // 函数的调用：
+        abs(10,'123');
+        console.log(abs(10,'123'));
+        foo(10,20,30,40);
+
+        // arguments 关键字
+        // 它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数
+
+        // rest 参数
+
+        // 变量的作用域
+
+        // 变量提升
+
+        // 全局作用域
+        var course = 'Learn JavaScript'
+        console.log(window.course);
+
+        // 局部作用域
+        // 用 let 替代 var 可以声明一个块级作用域的变量
+
+        // 常量
+        // 关键字 const 用来定义常量，const 与 let 都具有块级作用域
+
+        // 方法： 在一个对象中绑定含函数，称为这个对象的方法。
+        var xiaoming ={
+            name: '小明',
+            birth: 1998,
+            age: function () {
+                let y = new Date().getFullYear();
+                return y - this.birth;
+            }
+        }
+        console.log(xiaoming.age());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+<head>
+
+<body>
+    <div id="app">
+        <!-- === 在JS中代表绝对等于：数据和类型都要相等 -->
+        <h1 v-if="type === 'A'">A</h1>
+        <h1 v-else-if="type === 'B'">B</h1>
+        <h1 v-else-if="type === 'C'">C</h1>
+        <h1 v-else>who</h1>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                type: 'A'
+            }
+        })
+    </script>
+</body>
+
+</html>

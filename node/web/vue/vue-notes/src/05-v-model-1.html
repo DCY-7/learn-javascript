@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+<head>
+
+<body>
+    <div id="app">
+        <!-- v-bind:value 只能进行单项的数据渲染 -->
+        <input type="text" v-bind:value='searchMap.keyword'>
+        <!-- v-model 可以进行双向的数据绑定 -->
+        <input type="text" v-model='searchMap.keyword'>
+        <p>您要查询的数据是：{{searchMap.keyword}}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                searchMap:{
+                    keyword: 'dengchenyang'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

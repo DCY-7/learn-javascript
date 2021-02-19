@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  </title>
+</head>
+<body>
+    <script>
+        // let 和 const 解决了 var 的变量穿透问题 和 常量修改问题
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+        //console.log(i); 
+
+        const PI = Math.PI;
+        //PI = 100;
+        console.log(PI);
+
+        // 在实际开发和生产中，如果在小程序、uniapp、一些脚手架中，可以大胆去使用let 和 const
+        // 但是如果你是 web开发，建议使用 var ，因为一些低版本的浏览器还是不支持 let 和 const
+
+    </script>
+</body>
+</html>
