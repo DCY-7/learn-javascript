@@ -1,7 +1,5 @@
 const Sequelize = require('sequelize');
-
 const uuid = require('node-uuid');
-
 const config = require('./config');
 
 console.log('init sequelize...');
@@ -48,10 +46,6 @@ function defineModel(name, attributes) {
         type: Sequelize.BIGINT,
         allowNull: false
     };
-    attrs.version = {
-        type: Sequelize.BIGINT,
-        allowNull: false
-    };
     console.log('model defined for table: ' + name + '\n' + JSON.stringify(attrs, function (k, v) {
         if (k === 'type') {
             for (let key in Sequelize) {
@@ -87,11 +81,9 @@ function defineModel(name, attributes) {
                     }
                     obj.createdAt = now;
                     obj.updatedAt = now;
-                    obj.version = 0;
                 } else {
                     console.log('will update entity...');
                     obj.updatedAt = now;
-                    obj.version++;
                 }
             }
         }
@@ -101,15 +93,7 @@ function defineModel(name, attributes) {
 const TYPES = ['STRING', 'INTEGER', 'BIGINT', 'TEXT', 'DOUBLE', 'DATEONLY', 'BOOLEAN'];
 
 var exp = {
-    defineModel: defineModel,
-    sync: () => {
-        // only allow create ddl in non-production environment:
-        if (process.env.NODE_ENV !== 'production') {
-            sequelize.sync({ force: true });
-        } else {
-            throw new Error('Cannot sync() when NODE_ENV is set to \'production\'.');
-        }
-    }
+    defineModel: defineModel
 };
 
 for (let type of TYPES) {
