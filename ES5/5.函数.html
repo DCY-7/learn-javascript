@@ -9,25 +9,27 @@
         //         return -x; 
         //     }
         // }
-        var abs = function (x){
-            if (typeof x != 'number'){
+        var abs = function (x) {
+            if (typeof x != 'number') {
                 throw 'Not a number';
             }
-            if (x >= 0) { 
-                return x; 
+            if (x >= 0) {
+                return x;
             } else {
-                return -x; 
+                return -x;
             }
         };
-        function foo(a,b,...rest) {
-            console.log('a = '+a);
-            console.log('b = '+b);
+
+        function foo(a, b, ...rest) {
+            console.log('a = ' + a);
+            console.log('b = ' + b);
             console.log(rest);
         }
+
         // 函数的调用：
-        abs(10,'123');
-        console.log(abs(10,'123'));
-        foo(10,20,30,40);
+        abs(10, '123');
+        console.log(abs(10, '123'));
+        foo(10, 20, 30, 40);
 
         // arguments 关键字
         // 它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数
@@ -49,7 +51,7 @@
         // 关键字 const 用来定义常量，const 与 let 都具有块级作用域
 
         // 方法： 在一个对象中绑定含函数，称为这个对象的方法。
-        var xiaoming ={
+        var xiaoming = {
             name: '小明',
             birth: 1998,
             age: function () {
@@ -61,6 +63,6 @@
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>

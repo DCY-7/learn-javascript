@@ -9,31 +9,31 @@
                 this.name = name;
             }
 
-            hello(){
-                console.log('Hello, '+this.name + '!');
+            hello() {
+                console.log('Hello, ' + this.name + '!');
             }
         }
 
         var xiaoming = new Student('小明');
         xiaoming.hello();
 
-        class PrimaryStudent extends Student{
-            constructor(name,grade){
+        class PrimaryStudent extends Student {
+            constructor(name, grade) {
                 super(name);
                 this.grade = grade;
             }
 
-            myGrade(){
-                console.log('I am at grade '+this.grade);
+            myGrade() {
+                console.log('I am at grade ' + this.grade);
             }
         }
 
-        var xiaowang = new PrimaryStudent('小王',100);
+        var xiaowang = new PrimaryStudent('小王', 100);
         xiaowang.hello();
         xiaowang.myGrade();
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>

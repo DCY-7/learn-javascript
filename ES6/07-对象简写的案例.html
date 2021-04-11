@@ -7,38 +7,38 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="width:100%;text-align:center;margin-top: 200px;">
-        <form >
-            <p>
-                username：<input type="text" id='account'>
-            </p>
-            <p>
-                password：<input type="password" id='password'>
-            </p>
-            <div style="width:100%;text-align:center;">
-                <input type="button" value="登录" id='loginbtn' >&nbsp;&nbsp;
-                <input type="reset" value="取消">
-            </div>
-        </form>
-    </div>
-    <script>
-        // doucment.getElementById('loginbtn').onclick = function(){}
-       
-        $("#loginbtn").on('click',() => {
-            var account = $('#account').val();
-            var password = $('#password').val();
-            // 对象简写的应用场景
-            var data = {account,password};
-            // 执行一个异步请求
-            $.ajax({
-                type: 'post',
-                url: 'xxx',
-                data: data,
-                success(){
+<div style="width:100%;text-align:center;margin-top: 200px;">
+    <form>
+        <p>
+            username：<input type="text" id='account'>
+        </p>
+        <p>
+            password：<input type="password" id='password'>
+        </p>
+        <div style="width:100%;text-align:center;">
+            <input type="button" value="登录" id='loginbtn'>&nbsp;&nbsp;
+            <input type="reset" value="取消">
+        </div>
+    </form>
+</div>
+<script>
+    // doucment.getElementById('loginbtn').onclick = function(){}
 
-                }
-            });
+    $("#loginbtn").on('click', () => {
+        var account = $('#account').val();
+        var password = $('#password').val();
+        // 对象简写的应用场景
+        var data = {account, password};
+        // 执行一个异步请求
+        $.ajax({
+            type: 'post',
+            url: 'xxx',
+            data: data,
+            success() {
+
+            }
         });
-    </script>
+    });
+</script>
 </body>
 </html>

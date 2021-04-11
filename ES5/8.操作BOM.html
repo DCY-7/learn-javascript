@@ -2,59 +2,59 @@
 <head>
 </head>
 <body>
-    <dl id="code-menu" style="border:solid 1px #ccc;padding:6px;"> 
-        <dt>Java</dt> 
-        <dd>Spring</dd> 
-        <dt>Python</dt> 
-        <dd>Django</dd> 
-        <dt>Linux</dt> 
-        <dd>Docker</dd> 
-    </dl>
+<dl id="code-menu" style="border:solid 1px #ccc;padding:6px;">
+    <dt>Java</dt>
+    <dd>Spring</dd>
+    <dt>Python</dt>
+    <dd>Django</dd>
+    <dt>Linux</dt>
+    <dd>Docker</dd>
+</dl>
 </body>
-    <script>
-        'use strict';
-        // window 对象：不但充当全局作用域，而且表示浏览器窗口
-        console.log('window inner size: '+ window.innerWidth + ' x ' + window.innerHeight)
+<script>
+    'use strict';
+    // window 对象：不但充当全局作用域，而且表示浏览器窗口
+    console.log('window inner size: ' + window.innerWidth + ' x ' + window.innerHeight)
 
-        // navigator 对象：表示浏览器的信息
-        console.log('appName = ' + navigator.appName);
-        console.log('appVersion = ' + navigator.appVersion);
-        console.log('language = ' + navigator.language);
-        console.log('platform = ' + navigator.platform);
-        console.log('userAgent = ' + navigator.userAgent);
+    // navigator 对象：表示浏览器的信息
+    console.log('appName = ' + navigator.appName);
+    console.log('appVersion = ' + navigator.appVersion);
+    console.log('language = ' + navigator.language);
+    console.log('platform = ' + navigator.platform);
+    console.log('userAgent = ' + navigator.userAgent);
 
-        // screen 对象：表示屏幕的信息
-        console.log('Screen size = ' + screen.width + ' x ' + screen.height);
+    // screen 对象：表示屏幕的信息
+    console.log('Screen size = ' + screen.width + ' x ' + screen.height);
 
-        // location 对象：表示当前页面的 URL 信息
-        console.log('href = ' + location.href);
-        console.log('protocol = ' + location.protocol);
-        console.log('host = ' + location.host);
-        console.log('port = ' + location.port);
-        console.log('pathname = ' + location.pathname);
-        console.log('search = ' + location.search);
-        console.log('hash = ' + location.hash);
-        //location.reload();// 刷新页面
-        //location.assign('https://www.baidu.com');// 设置一个新的 URL 地址
+    // location 对象：表示当前页面的 URL 信息
+    console.log('href = ' + location.href);
+    console.log('protocol = ' + location.protocol);
+    console.log('host = ' + location.host);
+    console.log('port = ' + location.port);
+    console.log('pathname = ' + location.pathname);
+    console.log('search = ' + location.search);
+    console.log('hash = ' + location.hash);
+    //location.reload();// 刷新页面
+    //location.assign('https://www.baidu.com');// 设置一个新的 URL 地址
 
-        // document 对象：表示当前页面。HTML在浏览器中以 DOM 形式表示为树形结构， document 对象就是整个DOM树的根节点
-        // document.title = 'new title';
-        // 查找DOM 树的某个节点，需要从 document 对象开始查找。通常根据ID 和 TagName CSS选择器
-        var menu = document.getElementById('code-menu');
-        var drinks = document.getElementsByTagName('dt');
-        // document.getElementsByClassName('nm');
+    // document 对象：表示当前页面。HTML在浏览器中以 DOM 形式表示为树形结构， document 对象就是整个DOM树的根节点
+    // document.title = 'new title';
+    // 查找DOM 树的某个节点，需要从 document 对象开始查找。通常根据ID 和 TagName CSS选择器
+    var menu = document.getElementById('code-menu');
+    var drinks = document.getElementsByTagName('dt');
+    // document.getElementsByClassName('nm');
 
-        var i,s;
+    var i, s;
 
-        s = '提供的饮料有：';
-        for (let i = 0; i < drinks.length; i++) {
-            s = s + drinks[i].innerHTML + ',';
-        }
-        console.log(s);
-        console.log('cookies = ' + document.cookie);
+    s = '提供的饮料有：';
+    for (let i = 0; i < drinks.length; i++) {
+        s = s + drinks[i].innerHTML + ',';
+    }
+    console.log(s);
+    console.log('cookies = ' + document.cookie);
 
-        // history 对象：保存了浏览器的历史记录，JS可以调用该对象 的back() 或 forward()，相当于用户点击了浏览器的 后退 或 前进 按钮
-        // 不能用
+    // history 对象：保存了浏览器的历史记录，JS可以调用该对象 的back() 或 forward()，相当于用户点击了浏览器的 后退 或 前进 按钮
+    // 不能用
 
-    </script>
+</script>
 </html>

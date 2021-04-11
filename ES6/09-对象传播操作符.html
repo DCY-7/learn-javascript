@@ -7,25 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        // 对象传播操作符 ...
-        var person = {
-            name: '邓晨阳',
-            address: '山西大同',
-            link: 'https://www.baidu.com',
-            phone: '15536361004',
-            go(){
-                console.log('开始上班啦！');
-            }
+<script>
+    // 对象传播操作符 ...
+    var person = {
+        name: '邓晨阳',
+        address: '山西大同',
+        link: 'https://www.baidu.com',
+        phone: '15536361004',
+        go() {
+            console.log('开始上班啦！');
         }
+    }
 
-        // 解构出来
-        var {name,address,...person2} = person;
-        console.log(name);
-        console.log(address);
-        console.log(person2);
+    // 解构出来
+    var {name, address, ...person2} = person;
+    console.log(name);
+    console.log(address);
+    console.log(person2);
 
-         
-    </script>
+
+</script>
 </body>
 </html>

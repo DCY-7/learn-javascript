@@ -7,31 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        var info = {
-            title: '邓晨阳',
-            link: 'https://www.baidu.com',
-            go: function(){
-                console.log('我骑着电瓶车上学！')
-            }
+<script>
+    var info = {
+        title: '邓晨阳',
+        link: 'https://www.baidu.com',
+        go: function () {
+            console.log('我骑着电瓶车上学！')
         }
+    }
 
-        // ES6的简写：
-        // 规则：1.如果key和变量名字一致，可以只定义一次即可 2.如果value是一个含漱液，可以省略function
-        var title = '邓晨阳';
-        var link = 'https://www.baidu.com';
-        let info2 = {
-            title,
-            link,
-            go(){
-                console.log('我骑着电瓶车上学！')
-            }
+    // ES6的简写：
+    // 规则：1.如果key和变量名字一致，可以只定义一次即可 2.如果value是一个函数，可以省略function
+    var title = '邓晨阳';
+    var link = 'https://www.baidu.com';
+    let info2 = {
+        title,
+        link,
+        go() {
+            console.log('我骑着电瓶车上学！')
         }
+    }
 
-        console.log(info);
-        console.log(info2);
-        info.go();
-        info2.go();
-    </script>
+    console.log(info);
+    console.log(info2);
+    info.go();
+    info2.go();
+</script>
 </body>
 </html>
